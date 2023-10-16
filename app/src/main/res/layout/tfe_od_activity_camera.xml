@@ -32,6 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="10dp"
+            android:layout_marginTop="4dp"
             android:text="Switch" />
 
         <FrameLayout
@@ -39,6 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context="org.tensorflow.demo.CameraActivity">
+
 
 
         </FrameLayout>
@@ -50,10 +52,16 @@
             android:layout_alignParentTop="true"
             android:background="@color/tfe_semi_transparent">
 
-            <ImageView
+            <TextView
+                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/tfl2_logo" />
+                android:background="@android:color/white"
+                android:paddingLeft="15px"
+                android:paddingRight="15px"
+                android:text="Realtime Driver Drowsiness Detection\nTest | Tensorflow Lite | CNN | YoloV5"
+                android:textColor="@android:color/black" />
+
         </androidx.appcompat.widget.Toolbar>
 
     </RelativeLayout>
