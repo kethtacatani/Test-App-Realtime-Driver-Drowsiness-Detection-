@@ -558,7 +558,7 @@ public abstract class CameraActivity extends AppCompatActivity
 
 
   protected void setFragment() {
-    String cameraId = rearCam ? chooseCamera() : chooseFrontCamera();
+    String cameraId = rearCam ? chooseFrontCamera():chooseCamera() ;
 
     Fragment fragment;
     if (useCamera2API) {

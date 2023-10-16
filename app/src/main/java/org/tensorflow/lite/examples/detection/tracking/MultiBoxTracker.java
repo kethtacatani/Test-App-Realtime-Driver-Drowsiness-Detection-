@@ -75,10 +75,10 @@ public class MultiBoxTracker {
 
     boxPaint.setColor(Color.RED);
     boxPaint.setStyle(Style.STROKE);
-    boxPaint.setStrokeWidth(10.0f);
+    boxPaint.setStrokeWidth(3.0f);
     boxPaint.setStrokeCap(Cap.ROUND);
     boxPaint.setStrokeJoin(Join.ROUND);
-    boxPaint.setStrokeMiter(100);
+    boxPaint.setStrokeMiter(30);
 
     textSizePx =
             TypedValue.applyDimension(
@@ -96,11 +96,11 @@ public class MultiBoxTracker {
   public synchronized void drawDebug(final Canvas canvas) {
     final Paint textPaint = new Paint();
     textPaint.setColor(Color.WHITE);
-    textPaint.setTextSize(60.0f);
+    textPaint.setTextSize(30.0f);
 
     final Paint boxPaint = new Paint();
     boxPaint.setColor(Color.RED);
-    boxPaint.setAlpha(200);
+    boxPaint.setAlpha(100);
     boxPaint.setStyle(Style.STROKE);
 
     for (final Pair<Float, RectF> detection : screenRects) {
@@ -150,7 +150,7 @@ public class MultiBoxTracker {
       //            borderedText.drawText(canvas, trackedPos.left + cornerSize, trackedPos.top,
       // labelString);
       borderedText.drawText(
-              canvas, trackedPos.left + cornerSize, trackedPos.top, labelString + "%", boxPaint);
+              canvas, trackedPos.left + cornerSize, trackedPos.bottom, labelString + "%", boxPaint);
     }
   }
 
